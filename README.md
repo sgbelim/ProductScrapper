@@ -11,7 +11,7 @@
 
 Products Scrapper is a console based application that scrapes the Sainsbury’s grocery site for Ripe Fruits page
 (http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html)
-and prints out a JSON in below format :
+and prints JSON as shown below :
 
 ```javascript
 {
