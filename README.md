@@ -110,6 +110,12 @@ This application uses a local instance of [Gradle](http://gradle.org/).
 * cd [PROJECT_ROOT] folder
 * gradlew clean test (Windows) | gradle clean test (Linux)
 
+### To Run All tasks
+
+* cd [PROJECT_ROOT] folder
+* gradlew clean build test run (Windows) | gradle clean build test run (Linux)
+* gradlew clean build test run -PappArgs="['http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html']" (Windows) | gradle clean build test run -PappArgs="['http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html']"
+
 ### View Reports :
 
 * To view the test report at [PROJECT_ROOT]/build/reports/tests/index.html
