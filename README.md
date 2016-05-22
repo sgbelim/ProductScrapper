@@ -1,5 +1,14 @@
 #Sainsbury's Software Engineering Test Implementation - Products Scrapper
 
+
+*  [![Build Status](https://travis-ci.org/sgbelim/ProductScrapper.svg?branch=master)](https://travis-ci.org/sgbelim/ProductScrapper)
+
+*  [![Coverage Status](https://coveralls.io/repos/github/sgbelim/ProductScrapper/badge.svg?branch=master)](https://coveralls.io/github/sgbelim/ProductScrapper?branch=master)
+
+*  [![Gitter](https://badges.gitter.im/sgbelim/ProductScrapper.svg)](https://gitter.im/sgbelim/ProductScrapper?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+
+
 ### Introduction
 
 Products Scrapper is a console based application that scrapes the Sainsbury’s grocery site for Ripe Fruits page
