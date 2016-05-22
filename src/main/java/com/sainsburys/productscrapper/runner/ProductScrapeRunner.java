@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 
 import static com.sainsburys.productscrapper.constants.Constants.SCRAPE_URL;
 
+/**
+ * Command Line Runner to scrape the webpage and return the result
+ */
 @Component
 public class ProductScrapeRunner implements CommandLineRunner {
 

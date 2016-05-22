@@ -17,6 +17,9 @@ import com.sainsburys.productscrapper.webclient.WebClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Spring application configuration object to do dependency injection
+ */
 @Configuration
 public class ApplicationConfiguration {
 

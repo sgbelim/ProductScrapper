@@ -8,6 +8,9 @@ import org.slf4j.LoggerFactory;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 
+/**
+ * ResultSerialiser implementation to serialise the result as json
+ */
 public class ResultJsonSerialiser implements ResultSerialiser {
 
     private static final Logger LOG = LoggerFactory.getLogger(ResultJsonSerialiser.class);
@@ -18,6 +21,11 @@ public class ResultJsonSerialiser implements ResultSerialiser {
         this.mapper = objectMapper;
     }
 
+    /**
+     *
+     * @param result
+     * @return - Serialised object as string
+     */
     @Override
     public String serialize(Result result) {
 
