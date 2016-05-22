@@ -14,11 +14,15 @@ public class ResultsFacadeImpl implements ResultsFacade {
     @Autowired
     private ProductRepository productRepository;
 
+    /**
+     * @param url - The Url for scrapping
+     * @return - Result Object with list of Products
+     */
     @Override
     public Result getResults(String url) {
 
         List<Product> products = productRepository.getAll(url);
-        
+
         Result result = new Result(products);
 
         return result;

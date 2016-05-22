@@ -12,6 +12,10 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 public class Application {
 
+    /**
+     * Bootstrap the Spring Boot Application (Product Scrapper)
+     * @param args
+     */
     public static void main(String... args) {
         SpringApplication.run(Application.class, args);
     }

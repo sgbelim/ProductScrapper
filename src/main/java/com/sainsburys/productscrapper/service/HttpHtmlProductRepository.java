@@ -11,6 +11,9 @@ import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 
+/**
+ * ProductRepository Implementation to scrape the website
+ */
 @Service
 public class HttpHtmlProductRepository implements ProductRepository {
 
@@ -22,6 +25,11 @@ public class HttpHtmlProductRepository implements ProductRepository {
     @Autowired
     private Parser htmlParser;
 
+    /**
+     *
+     * @param url - The Url for scrapping
+     * @return  - List of Products
+     */
     @Override
     public List<Product> getAll(String url) {
 

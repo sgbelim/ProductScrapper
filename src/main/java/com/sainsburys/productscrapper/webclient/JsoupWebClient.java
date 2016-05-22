@@ -10,11 +10,19 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+/**
+ * WebClient Implementation to connect to the scrape url
+ */
 @Component
 public class JsoupWebClient implements WebClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(JsoupWebClient.class);
 
+    /**
+     *
+     * @param url - The Url for scrapping
+     * @return Document - the page document as  Jsoup Document
+     */
     @Override
     public Document getDocument(String url) {
 
@@ -29,6 +37,12 @@ public class JsoupWebClient implements WebClient {
         return document;
     }
 
+
+    /**
+     *
+     * @param url - The Url for scrapping
+     * @return Jsoup Response object
+     */
     @Override
     public Connection.Response executeRequest(String url) {
 

@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 
+/**
+ * Parser Implementation to scrape and parse the website
+ */
 @Component
 public class HtmlParserImpl implements Parser {
 
@@ -21,6 +24,11 @@ public class HtmlParserImpl implements Parser {
     @Autowired
     private WebClient webClient;
 
+    /**
+     *
+     * @param url - The Url for scrapping
+     * @return Elements - All product information Jsoup Elements
+     */
     @Override
     public Elements getAllProducts(String url) {
 
@@ -30,6 +38,11 @@ public class HtmlParserImpl implements Parser {
         return elements;
     }
 
+    /**
+     *
+     * @param detailsUrl - The details Url for scrapping
+     * @return - The size of the page
+     */
     @Override
     public double getPageSize(String detailsUrl) {
 
@@ -40,6 +53,11 @@ public class HtmlParserImpl implements Parser {
         return pageSize;
     }
 
+    /**
+     *
+     * @param detailsUrl  - The details Url for scrapping
+     * @return - Product description text
+     */
     @Override
     public String getProductDescription(String detailsUrl) {
 
