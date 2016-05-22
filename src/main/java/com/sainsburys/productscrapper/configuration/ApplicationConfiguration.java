@@ -6,6 +6,8 @@ import com.sainsburys.productscrapper.facade.ResultsFacade;
 import com.sainsburys.productscrapper.facade.ResultsFacadeImpl;
 import com.sainsburys.productscrapper.parser.HtmlParserImpl;
 import com.sainsburys.productscrapper.parser.Parser;
+import com.sainsburys.productscrapper.reporter.ConsoleReporter;
+import com.sainsburys.productscrapper.reporter.Reporter;
 import com.sainsburys.productscrapper.serialiser.ResultJsonSerialiser;
 import com.sainsburys.productscrapper.serialiser.ResultSerialiser;
 import com.sainsburys.productscrapper.service.HttpHtmlProductRepository;
@@ -36,6 +38,11 @@ public class ApplicationConfiguration {
     @Bean
     public WebClient webClient() {
         return new JsoupWebClient();
+    }
+
+    @Bean
+    public Reporter consoleReporter() {
+        return new ConsoleReporter();
     }
 
     @Bean
