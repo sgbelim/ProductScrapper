@@ -66,6 +66,7 @@ This application uses a local instance of [Gradle](http://gradle.org/).
 ### Running the application with JAVA  - without url as argument
 
 * git clone https://github.com/sgbelim/ProductScrapper.git
+* cd [PROJECT_ROOT] folder
 * gradlew fatJar (Windows) | gradle fatJar (Linux)
 * cd [PROJECT_ROOT]/build/libs folder
 * java -jar sainsbury-productscrapper-all-1.0.jar
@@ -74,6 +75,7 @@ This application uses a local instance of [Gradle](http://gradle.org/).
 ### Running the application with JAVA  - with url as argument
 
 * git clone https://github.com/sgbelim/ProductScrapper.git
+* cd [PROJECT_ROOT] folder
 * gradlew fatJar (Windows) | gradle fatJar (Linux)
 * cd [PROJECT_ROOT]/build/libs folder
 * java -jar sainsbury-productscrapper-all-1.0.jar java -jar sainsbury-productscrapper-all-1.0.jar http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html
