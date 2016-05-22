@@ -30,7 +30,7 @@ public class ApplicationIntegrationTest {
     public void should_contain_result_in_the_console_output_response() {
 
         // Act
-        application.main("sampleOutPut");
+        Application.main("sampleOutPut");
         String consoleOutput = outputCapture.toString();
 
         // Assert
@@ -49,7 +49,7 @@ public class ApplicationIntegrationTest {
                 "  }";
 
         // Act
-        application.main("sampleOutPut");
+        Application.main("sampleOutPut");
         String consoleOutput = outputCapture.toString();
         String actualFirstProduct = getFirstProduct(consoleOutput);
 

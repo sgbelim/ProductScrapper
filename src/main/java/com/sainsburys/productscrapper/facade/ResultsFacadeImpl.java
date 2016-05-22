@@ -18,7 +18,7 @@ public class ResultsFacadeImpl implements ResultsFacade {
     public Result getResults(String url) {
 
         List<Product> products = productRepository.getAll(url);
-        
+
         Result result = new Result(products);
 
         return result;
