@@ -11,7 +11,7 @@
 
 Products Scrapper is a console based application that scrapes the Sainsbury’s grocery site for Ripe Fruits page
 (http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html)
-and prints JSON as shown below :
+and the details page for each product and prints JSON as shown in below format :
 
 ```javascript
 {
@@ -66,7 +66,7 @@ This application uses a local instance of [Gradle](http://gradle.org/).
 ### Running the application with JAVA
 
 * git clone https://github.com/sgbelim/ProductScrapper.git
-* gradlew fatJar
+* gradlew fatJar (Windows) | gradle fatJar (Linux)
 * cd [PROJECT_ROOT]/build/libs folder
 * java -jar sainsbury-productscrapper-all-1.0.jar
 
