@@ -18,21 +18,9 @@ buildscript {
     }
 }
 
-archivesBaseName = 'sainsbury-product-scrapper'
 mainClassName = "com.sainsburys.productscrapper.Application"
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
-
-sourceSets {
-    integrationTest {
-        java {
-            srcDir file('src/integrationTest/java')
-        }
-        resources {
-            srcDir file('src/integrationTest/resources')
-        }
-    }
-}
 
 repositories {
     mavenLocal()
@@ -81,6 +69,12 @@ jacocoTestReport {
 }
 
 task checkstyle(dependsOn: [checkstyleMain, checkstyleTest])
+
+run {
+    if ( project.hasProperty("appArgs") ) {
+        args Eval.me(appArgs)
+    }
+}
 
 task fatJar(type: Jar) {
     manifest {

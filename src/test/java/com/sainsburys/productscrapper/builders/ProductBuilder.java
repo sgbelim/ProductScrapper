@@ -1,22 +1,17 @@
 package com.sainsburys.productscrapper.builders;
 
 import com.sainsburys.productscrapper.model.Product;
+import static org.apache.commons.lang3.StringUtils.EMPTY;
 
 public class ProductBuilder {
 
     private String title;
-    private String detailsUrl;
     private String pricePerUnit;
     private double pageSize;
     private String description;
 
     public ProductBuilder withTitle(String title) {
         this.title = title;
-        return this;
-    }
-
-    public ProductBuilder withDetailsUrl(String detailsUrl) {
-        this.detailsUrl = detailsUrl;
         return this;
     }
 
@@ -36,9 +31,7 @@ public class ProductBuilder {
     }
 
     public Product build() {
-        Product product = new Product(this.title, this.detailsUrl, this.pricePerUnit, this.pageSize, this.description);
-
+        Product product = new Product(this.title, EMPTY, this.pricePerUnit, this.pageSize, this.description);
         return product;
-
     }
 }

@@ -21,10 +21,16 @@ public class ProductScrapeRunner implements CommandLineRunner {
     @Autowired
     private Reporter reporter;
 
+    /**
+     *
+     * @param args - Takes the url from argument if specified otherwise uses the default url
+     */
     @Override
-    public void run(String... strings) {
+    public void run(String... args) {
 
-        Result results = resultsFacade.getResults(SCRAPE_URL);
+        String scrapeUrl = (args.length == 0) ? SCRAPE_URL : args[0];
+
+        Result results = resultsFacade.getResults(scrapeUrl);
 
         reporter.report(results);
     }

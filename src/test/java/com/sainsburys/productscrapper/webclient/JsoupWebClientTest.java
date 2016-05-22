@@ -20,7 +20,6 @@ public class JsoupWebClientTest {
 
         // Assert
         assertThat(document).isNotNull();
-
     }
 
     @Test(expected = RuntimeException.class)
@@ -33,7 +32,6 @@ public class JsoupWebClientTest {
         // Act
         webClient.getDocument(url);
 
-        // Assert
     }
 
     @Test
@@ -60,7 +58,5 @@ public class JsoupWebClientTest {
 
         // Act
         webClient.executeRequest(url);
-
-        // Assert
     }
 }

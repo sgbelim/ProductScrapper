@@ -79,4 +79,26 @@ public class ProductScrapeRunnerTest {
         assertThat(actualResult.getResults().size()).isEqualTo(3);
 
     }
+
+    @Test
+    public void should_get_result_using_scrape_url_passed_through_argument()  {
+
+        // Arrange
+        String scrapeUrl = "http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html";
+        Product product1 = new ProductBuilder().withPageSize(10.1).build();
+        Product product2 = new ProductBuilder().withPageSize(20.2).build();
+        Product product3 = new ProductBuilder().withPageSize(30).build();
+        List<Product> products = asList(product1, product2, product3);
+
+        Result result = new Result(products);
+
+        when(resultsFacade.getResults(scrapeUrl)).thenReturn(result);
+
+        // Act
+        productScrapeRunner.run();
+
+        // Assert
+        verify(resultsFacade).getResults(scrapeUrl);
+
+    }
 }

@@ -63,7 +63,7 @@ and the details page for each product and prints JSON as shown in below format :
 
 This application uses a local instance of [Gradle](http://gradle.org/).
 
-### Running the application with JAVA
+### Running the application with JAVA  - without url as argument
 
 * git clone https://github.com/sgbelim/ProductScrapper.git
 * gradlew fatJar (Windows) | gradle fatJar (Linux)
@@ -71,11 +71,26 @@ This application uses a local instance of [Gradle](http://gradle.org/).
 * java -jar sainsbury-productscrapper-all-1.0.jar
 * It will print the expected output to the console
 
-### Running the application with [Gradle](http://gradle.org/)
+### Running the application with JAVA  - with url as argument
+
+* git clone https://github.com/sgbelim/ProductScrapper.git
+* gradlew fatJar (Windows) | gradle fatJar (Linux)
+* cd [PROJECT_ROOT]/build/libs folder
+* java -jar sainsbury-productscrapper-all-1.0.jar java -jar sainsbury-productscrapper-all-1.0.jar http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html
+* It will print the expected output to the console
+
+### Running the application with [Gradle](http://gradle.org/) - without url as argument
 
 * git clone https://github.com/sgbelim/ProductScrapper.git
 * cd [PROJECT_ROOT] folder
 * gradlew run (Windows) |  gradle run (Linux)
+* It will print the expected output to the console
+
+### Running the application with [Gradle](http://gradle.org/) - with url as argument
+
+* git clone https://github.com/sgbelim/ProductScrapper.git
+* cd [PROJECT_ROOT] folder
+* gradlew run -PappArgs="['http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html']" (Windows) | gradle run -PappArgs="['http://hiring-tests.s3-website-eu-west-1.amazonaws.com/2015_Developer_Scrape/5_products.html']" (Linux)
 * It will print the expected output to the console
 
 ### CheckStyle

@@ -61,7 +61,7 @@ public class ResultTest {
     }
 
     @Test
-    public void should_return_zero_as_total_if_not_producct_have_price_per_unit_specified() {
+    public void should_return_zero_as_total_if_no_product_have_price_per_unit_specified() {
 
         // Arrange
         Product product1 = new ProductBuilder().build();
