@@ -69,12 +69,14 @@ This application uses a local instance of [Gradle](http://gradle.org/).
 * gradlew fatJar (Windows) | gradle fatJar (Linux)
 * cd [PROJECT_ROOT]/build/libs folder
 * java -jar sainsbury-productscrapper-all-1.0.jar
+* It will print the expected output to the console
 
 ### Running the application with [Gradle](http://gradle.org/)
 
 * git clone https://github.com/sgbelim/ProductScrapper.git
 * cd [PROJECT_ROOT] folder
 * gradlew run (Windows) |  gradle run (Linux)
+* It will print the expected output to the console
 
 ### CheckStyle
 
