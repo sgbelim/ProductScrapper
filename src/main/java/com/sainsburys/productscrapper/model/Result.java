@@ -1,11 +1,9 @@
 package com.sainsburys.productscrapper.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Result {
 
     private final List<Product> results;
@@ -18,6 +16,10 @@ public class Result {
         return results;
     }
 
+    /**
+     * calculates the total unit price
+     * @return - Total UnitPrice
+     */
     public BigDecimal getTotal() {
 
         if (results == null || results.isEmpty()) {

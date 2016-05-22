@@ -24,7 +24,7 @@ public class ResultJsonSerialiserTest {
     private ObjectMapper mapper = new ObjectMapper();
 
     @Test
-    public void should_return_results_node_as_json_when_results_serialized() {
+    public void should_return_results_node_as_json_when_results_is_serialized() {
 
         // Arrange
         ResultSerialiser resultJsonSerialize = new ResultJsonSerialiser(mapper);
